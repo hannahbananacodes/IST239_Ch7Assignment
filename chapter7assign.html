@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 7 Assignment</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        // step 2: create arrays
+        let paintings = ['The Starry Night', 'Guernica', 'Mona Lisa', 
+            'The Night Watch', 'American Gothic'];
+        
+        let artists = ['Vincent van Gogh', 'Pablo Picasso', 'Leonardo da Vinci',
+            'Rembrandt van Rijn', 'Grant Wood'];
+
+        let locations = [];
+        for (let i = 0; i < paintings.length; i++) {
+            let location = window.prompt("Enter the location for " + artists[i] + "'s " + paintings[i] + ":");
+            locations.push(location);
+        }
+
+       // document.write(locations[0] + locations[1] + locations[2] + locations[3] + locations [4]);
+       document.write("*******************************************************************<br>");
+       // step 3: output info for each painting
+       for (let i = 0; i < paintings.length; i++) {
+            document.write("<b>Painting:</b> " + paintings[i] + "  <b>Artist:</b> " + artists[i] + "  <b>Location:</b> " + locations[i] + "<br>");
+       }
+       let paintingInfo = [];
+       let sentence = "";
+       // step 4: add sentences to paintingInfo array and print out each element
+       for (let i = 0; i < paintings.length; i++) {
+            sentence = artists[i] + " painted " + paintings[i] + " which is located in " + locations[i] + ".<br>";
+            paintingInfo.push(sentence);
+       }
+       document.write("*******************************************************************<br>");
+       for (let i = 0; i < paintingInfo.length; i++) {
+            document.write(paintingInfo[i]);
+       }
+       document.write("*******************************************************************<br>");
+       // step 5: remove last element of paintingInfo and print out each element
+       paintingInfo.pop();
+       for (let i = 0; i < paintingInfo.length; i++) {
+            document.write(paintingInfo[i]);
+       }
+       document.write("*******************************************************************<br>");
+       // step 6: sort the elements of paintingInfo in alphabetical order and print them out
+       paintingInfo.sort();
+       for (let i = 0; i < paintingInfo.length; i++) {
+            document.write(paintingInfo[i]);
+       }
+       document.write("*******************************************************************");
+    </script>
+</body>
+</html>
